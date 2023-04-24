@@ -1,0 +1,13 @@
+e" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="NewAcc" type="Account[]"/>
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <lightning:card iconName="standard:Account" title="Novas contas"/>
+     <div class ='slds-p-arround_medium'>
+          <aura:iteration items="{!v.NewAcc}" var="Account">
+               <p>-------------------------</p>
+              <p>{!Account.Name}</p>
+              <p>{!Account.Negociacao__c}</p>
+              
+   
+    </aura:iteration>
+          </div>
