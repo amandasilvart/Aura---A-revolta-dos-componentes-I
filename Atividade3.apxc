@@ -1,0 +1,6 @@
+public class atividade {
+ @AuraEnabled
+    public static list<Account>getAccountsNR(){
+        return [SELECT Id, Name, Negociacao__c, Phone FROM Account WHERE Rating ='Hot'];
+    }
+}
