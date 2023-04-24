@@ -1,7 +1,8 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
     
     <lightning:recordEditForm aura:id="recordEditForm"
-                              objectApiName="Lead">
+                              objectApiName="Lead"
+        					  onsuccess="{!c.showToast}">
         <lightning:messages />
         
         
@@ -9,18 +10,19 @@
             <div class="slds-grid">
                 <div class="slds-col slds-p-horizontal_medium">
                     
-                    <lightning:inputField fieldName="Name" />  
-                    <lightning:inputField fieldName="Email" />
-                    <lightning:inputField fieldName="Phone" />
-                    <lightning:inputField fieldName="Fax" />
-                    <lightning:inputField fieldName="Company" />
-                    <lightning:inputField fieldName="Address" />
+                    <lightning:inputField  aura:id="field" fieldName="Name"/>  
+                    <lightning:inputField  aura:id="field" fieldName="Status"/>
+                    <lightning:inputField  aura:id="field" fieldName="Phone" />
+                    <lightning:inputField  aura:id="field" fieldName="Fax" />
+                    <lightning:inputField  aura:id="field" fieldName="Company" />
+                    
                     
                     
                 </div>
                 
             </div>
-            <center><lightning:button class="slds-m-top_small" type="submit" label="Novo Lead" onclick="{!c.showToast}"/></center>
+            <center><lightning:button class="slds-m-top_small" type="submit" label="Novo Lead"/></center>
+             <center><lightning:button label="Cancel" onclick="{!c.handleReset}" /></center>
         </div>
     </lightning:recordEditForm>
 </aura:component>
