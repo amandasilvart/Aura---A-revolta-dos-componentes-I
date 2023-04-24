@@ -1,5 +1,21 @@
-.THIS .h1{
-    background-color: white;
-    font-size: 18px;
+.THIS .slds-grid{
+    background-color: light blue;
     color: blue;
+   
+}
+
+.THIS .slds-box{
+     border-radius: 20px;
+     font-size: 18px;
+}
+
+.THIS .slds-m-top_small{
+    background-color:green;
+    color: white;
+}
+
+.THIS .cancelar{
+     background-color:red;
+     top:1px;
+     color: white;
 }
